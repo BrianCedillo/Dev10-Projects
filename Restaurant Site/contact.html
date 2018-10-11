@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Head Start -->
+  	<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Dev10-Projects">
+      <meta name="author" content="Brian Cedillo">
+
+  		<style>
+			ul {
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			    overflow: hidden;
+			}
+
+			li {
+			    float: left;
+			}
+
+			li a {
+			    text-align: center;
+			    padding: 14px 16px;
+			}
+
+			h1{
+				text-align: center;
+			}
+
+			.about {
+				width: 400px;
+				padding-left: 34%;
+			}
+
+			.footer{
+				text-align: center;
+			}
+
+			form {
+			text-align: center;
+			}
+
+
+		</style>
+   	</head>
+   	<!-- Head End -->
+
+	<!-- Body Start -->
+	<body>
+		<div class="header">
+	  		<h1>Brian's Bar & Grill</h1>
+		</div>
+		<hr>
+
+		<!-- NavBar Start -->
+		<ul class="nav">
+		  <li><a class="active" href="index.html">Home</a></li>
+		  <li><a href="menu.html">Menu</a></li>
+		  <li><a href="contact.html">Contact Us</a></li>
+		</ul>
+		<!-- NavBar End -->
+		<hr>
+
+
+		<!-- Form Start -->
+		<form method="post">
+			<div class="pColumn">
+				<p id="p1">Name: <input type="text" id="Name" placeholder=" " autofocus required></p>
+				<p id="p2">Email: <input type="email" id="email" placeholder=" " required></p>
+				<p id="p2">Phone: <input type="Phone" id="Phone" placeholder=" "></p>
+			</div>
+			Reason For Inquiry:
+			<select id="subject">
+				<option value="catering">Catering</option>
+				<option value="private">Private Party</option>
+				<option value="feedback">Feedback</option>
+				<option value="other">Other</option>
+		   </select>
+		   <br><br>
+			<div class="textformm">Additional Information:</div>
+			<textarea name="comments" rows="7" cols="30"></textarea>
+			<br><br>
+			Have you been to the restaurant?
+			<input type="radio" name="visited" value="no"/> No
+			<input type="radio" name="visited" value="yes"/> Yes
+		<br><br>
+			Best days to contact you:
+			<input type="checkbox" name="days" value="Monday"> M
+			<input type="checkbox" name="days" value="Tuesday"> T
+			<input type="checkbox" name="days" value="Wednesday"> W
+			<input type="checkbox" name="days" value="Thursday"> Th
+			<input type="checkbox" name="days" value="Friday"> F
+			<br><br>
+
+
+
+			<input type="submit" value ="Send Request"/>
+		</form>
+		<!-- Form End -->
+
+		<br><br>
+		<hr>
+
+	</body>
+	<!-- Body End -->
+
+	<!-- Footer Start -->
+	<footer></footer>
+	  	<div class="footer">
+	   		<p>559 Mooja Lane, Jacksonville, Florida 32211</p>
+	   		<p>(293)847-5612</p>
+	  	</div>
+	</footer>
+	<!-- Footer End -->
+</html>

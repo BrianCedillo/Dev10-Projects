@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Head Start -->
+  	<head>
+  		<link rel="stylesheet" href="restaurantStyles.css">
+
+  		<!-- Fonts Start -->
+		<!-- 4. Style the restaurant name with a hosted or embedded font. -->
+		<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Bungee+Shade">
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Righteous">
+          <!-- Fonts End -->
+
+  		<style>
+
+  			/* 3. Apply all styles for the menu and contact form in internal style sheets. */
+
+  			form {
+			text-align: center;
+			}
+
+			ul {
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			    overflow: hidden;
+			}
+
+			li {
+			    float: left;
+			}
+
+			li a {
+			    text-align: center;
+			    padding: 14px 16px;
+			}
+
+			h1{
+				text-align: center;
+			}
+
+			.about {
+				width: 400px;
+				padding-left: 34%;
+			}
+
+		</style>
+   	</head>
+   	<!-- Head End -->
+
+	<!-- Body Start -->
+	<body>
+		<div class="header">
+	  		<div>Brian's Bar & Grill</div>
+		</div>
+
+		<!-- NavBar Start -->
+		<ul class="nav">
+		  <li><a href="index.html">Home</a></li>
+		  <li><a href="menu.html">Menu</a></li>
+		  <li><a class="active" href="#contact.html">Contact Us</a></li>
+		</ul>
+		<!-- NavBar End -->
+
+		<!-- Form Start -->
+		<form action="index.html" method="post">
+			<div class="pColumn">
+				<!-- 8. Set the form labels for the required fields to be bold. -->
+				<p id="p1"><strong>Name: </strong> <input type="text" id="Name" placeholder=" " autofocus required></p>
+				<p id="p2"><strong>Email: </strong><input type="email" id="email" placeholder=" " required></p>
+				<p id="p2"><strong>Phone: </strong><input type="Phone" id="Phone" placeholder=" "></p> 
+			</div>
+			Reason For Inquiry: 
+			<select id="subject">
+				<option value="catering">Catering</option>
+				<option value="private">Private Party</option>
+				<option value="feedback">Feedback</option>
+				<option value="other">Other</option>
+		   </select>
+		   <br><br>
+			<div class="textformm">Additional Information:</div>
+			<textarea name="comments" rows="7" cols="30"></textarea>
+			<br><br>
+			Have you been to the restaurant?
+			<input type="radio" name="visited" value="no"/> No
+			<input type="radio" name="visited" value="yes"/> Yes
+		<br><br>
+			<strong>Best days to contact you:</strong>
+			<input type="checkbox" name="days" value="Monday"> M  
+			<input type="checkbox" name="days" value="Tuesday"> T  
+			<input type="checkbox" name="days" value="Wednesday"> W  
+			<input type="checkbox" name="days" value="Thursday"> Th  
+			<input type="checkbox" name="days" value="Friday"> F  
+			<br><br>
+
+			<input type="submit" value ="Send Request"/>
+		</form>
+		<!-- Form End -->
+
+		<br><br>
+
+	</body>
+	<!-- Body End -->
+
+	<!-- Footer Start -->
+	<footer></footer>
+	  	<div class="footer">
+	   		<p>559 Mooja Lane, Jacksonville, Florida 32211</p>
+	   		<p>(293)847-5612</p>
+	  	</div>    
+	</footer>
+	<!-- Footer End -->
+</html>
+

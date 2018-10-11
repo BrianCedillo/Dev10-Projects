@@ -1,0 +1,75 @@
+
+/* 4. Style the restaurant name with a hosted or embedded font. */
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+
+.footer{
+	/* 7. Set the background of the home page's content - 
+	not including the header, footer, or site navigation - 
+	to a color other than white. */
+	background-color: white;
+	text-align: center;
+    padding: 20px 0px;
+    margin: 0px
+    height: 100%;
+    position: relative;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.footer a {
+    color: #ffffff;
+}
+
+
+.header {
+	/* 7. Set the background of the home page's content - 
+	not including the header, footer, or site navigation - 
+	to a color other than white. */
+	background-color: white;
+    padding: 20px 0px;
+	text-align: center;
+	font-size: 60px;
+	/* Find a good font */
+	/* 4. Style the restaurant name with a hosted or embedded font. */
+	font-family: 'Righteous', cursive;
+}
+
+.nav {
+	/* 7. Set the background of the home page's content - 
+	not including the header, footer, or site navigation - 
+	to a color other than white. */
+	background-color: white;
+}
+
+/* 9. Style the site navigation so that:
+* Visited links appear in a different color than their default state.
+* When you hover over a link, the text is bold. This should only be when hovering. Otherwise, the text should be the normal thickness.
+* Active links should not be underlined. */
+
+a.active {
+
+	text-decoration: none;
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    font-weight:bold;
+    text-decoration: none;
+}
+
+body{
+	font-weight: 400px;
+	letter-spacing: 1px;
+    height: 100%;    
+}
+
+html,
+body {
+	margin: 0px;
+    height: 100%;
+}

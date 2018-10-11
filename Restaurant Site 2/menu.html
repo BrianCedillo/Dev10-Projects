@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Head Start -->
+  	<head>
+  		<link rel="stylesheet" href="restaurantStyles.css">
+
+  		<!-- Fonts Start -->
+		<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Bungee+Shade">
+		<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto">
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Righteous">
+          <!-- Fonts End -->
+
+  		<style>
+			ul {
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			    overflow: hidden;
+			}
+
+			li {
+			    float: left;
+			}
+
+			li a {
+			    text-align: center;
+			    padding: 14px 16px;
+			}
+
+			h1{
+				text-align: center;
+			}
+
+			.about {
+				width: 400px;
+				padding-left: 34%;
+			}
+
+			/* 3. Apply all styles for the menu and contact form in internal style sheets. */
+			.menu-container {
+				/* 6. Give the menu background a color other than white. */
+				background-color: #AEB6BF;
+			 	display: grid;
+			  	grid-gap: 10px;
+			  	grid-template-columns: auto auto auto;
+			  	padding: 10px;
+			}
+
+			.menu-item {
+			  	padding: 10px;
+			  	font-size: 25px;
+			  	text-align: center;
+			}
+
+			table {
+				padding-top: 20px;
+				margin-left: 25%;
+				margin-right: 25%;
+				font-size: 25px;
+				text-align: left;
+				width: 50%;
+				border: none;
+			}
+
+			/* 5. Make sure that the menu item names are larger than their descriptions.
+
+			Beverage Font larger than price (description = 25px) */
+			.beverage {
+				font-size: 28px;
+			}
+
+			/* 6. Give the menu background a color other than white. */
+			.offwhite {
+				background-color: #F4F6F7;
+			}
+
+			.gray {
+				background-color: #AEB6BF;
+			}
+			 
+		</style>
+
+   	</head>
+   	<!-- Head End -->
+
+	<!-- Body Start -->
+	<body>
+		<div class="header">
+	  		<div>Brian's Bar & Grill</div>
+		</div>
+
+		<!-- NavBar Start -->
+		<ul class="nav">
+		  <li><a href="index.html">Home</a></li>
+		  <li><a class="active" href="#menu.html">Menu</a></li>
+		  <li><a href="contact.html">Contact Us</a></li>
+		</ul>
+		<!-- NavBar End -->
+
+		<!-- Menu Start -->
+		<div class="menu-container">
+		  	<div class="menu-item">
+		  		<p>
+					<strong>Burger and Fries</strong><br>
+					An American Classic!<br>
+					Your choice- with or without cheese<br>Pickle, onion, tomato, and lettuce<br>Served with our famous thick cut french fries<br>
+					$7.95
+				</p>
+			</div>
+
+		  	<div class="menu-item">
+		  		<p>
+					<strong>Hot Dog and Chips</strong><br>
+					A Summer Classic!<br>
+					Your choice- white of wheat bun<br>Reslish, mustard, and ketchup<br>Served with our house-made chips<br>
+					$7.95
+				</p>
+			</div>
+
+			<div class="menu-item">
+		  		<p>
+		  			<strong>Italian Sausage and Peppers</strong><br>
+		  			An All-Time Favorite!<br>
+					Your choice- mild or spicy Cole Slaw<br>Served with garlic mashers<br>
+					$10.95
+				</p>
+			</div>
+
+			<div class="menu-item">
+		  		<p>
+					<strong>Tenderloin Sandwich and Chips</strong><br>
+					Really Hits the Spot!<br>
+					Plain or Sesame Seed Bun<br>Pickle, onion, tomato, and lettuce<br>Served with our house-made chips<br>
+					$8.95
+				</p>
+			</div>
+
+			<div class="menu-item">
+		  		<p>
+					<strong>House Salad</strong><br>
+					On the Lighter Side<br>
+					Your choice- with or without cheese <br>Iceber lettuce, tomatoes, peppers<br>Thousand Island or Ranch<br> DressingServed with a dinner roll<br>
+					$6.95
+				</p>
+			</div>
+
+			<div class="menu-item">
+		  		<p>
+					<strong>Brisket Sandwich and Fries</strong><br>
+					A Taste of Texas!<br>
+					Smoked Brisket on thick-cut<br>Texas Toast<br> Cole Slaw <br>Served with our famous thick-cut french fries<br>
+					$7.95
+				</p>
+			</div>
+		</div>
+		
+		<table cellspacing="0" cellpadding="0">
+			
+			<tr>
+				<th colspan="2"><strong> Beverages </strong></th>
+			</tr>
+
+			<tr class="gray"> <!--/* 6. Give the menu background a color other than white. --> 
+				<td>
+					<p class="beverage">
+						&nbsp;Root Beer
+					</p>
+				</td> 			
+				<td> $3.00 </td> 
+			</tr>
+
+			<tr class="offwhite"> <!--/* 6. Give the menu background a color other than white. -->
+				<td>
+					<p class="beverage">
+						&nbsp;Bottled Water
+					</p>
+				</td> 
+				<td> $1.25 </td> 
+			</tr>
+			<tr class="gray"> <!--/* 6. Give the menu background a color other than white. -->
+				<td>
+					<p class="beverage">
+						&nbsp;Lemonade
+					</p>
+				</td>			
+				<td> $1.00 </td> 
+			</tr>
+			<tr class="offwhite"> <!--/* 6. Give the menu background a color other than white. -->
+				<td>
+					<p class="beverage">
+						&nbsp;Iced Tea
+					</p>
+				</td>			
+				<td> $1.25 </td> 
+			</tr>
+		</table>
+		<!-- Menu End -->
+		
+		<br><br><br><br><br>
+	</body>
+	<!-- Body End -->
+
+	<!-- Footer Start -->
+	<footer>
+	  	<div class="footer">
+	   		<p>559 Mooja Lane, Jacksonville, Florida 32211</p>
+	   		<p>(293)847-5612</p>
+	  	</div>    
+	</footer>
+	<!-- Footer End -->
+</html>
+

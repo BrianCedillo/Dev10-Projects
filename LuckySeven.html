@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dev10-Projects">
+    <meta name="author" content="Brian Cedillo">
+
+    <title>Lucky Sevens</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      function luckySevens() {
+      var bet = document.getElementById("bet").value;
+      var initial = bet; //stored to compare to max, incase there were no wins.
+      var totalRolls = 1;
+      var counter = 0;
+      var funds = initial; //funds in game
+      var currentAmountArray = [bet];
+      var a1 = []; //dice 1 array
+      var a2 = []; //dice 2 array
+      var rollingsum = []; //to see wins and loses
+      var winCount = 0;
+
+      //check for sufficient starting amount
+      if (bet <= 0) {
+        alert("Insert $1 or more to PLAY!");
+        document.forms["rollform"]["bet"].parentElement.className = "form-group has-error"
+        return false;
+      }
+
+      //keep playing as long as there is money
+      while (funds > 0) {
+        totalRolls++;
+    	  var d1 = document.getElementById("die1");
+        var d2 = document.getElementById("die2");
+        var status = document.getElementById("status");
+        var die1 = Math.floor(Math.random() * 6) + 1;
+        var die2 = Math.floor(Math.random() * 6) + 1;
+    	  var diceSum = die1+die2;
+        d1.innerHTML = die1;
+        d2.innerHTML = die2;
+        a1.push(die1);
+        a2.push(die2);
+        rollingsum.push(diceSum);
+
+
+        // win - earn 4 if diceSum == 7
+        if (diceSum == 7) {
+          winCount++;
+          funds = funds + 4;
+          var prev = currentAmountArray[currentAmountArray.length - 1];
+          var current = prev + 4;
+          currentAmountArray.push(current);
+        }
+
+        // lose
+        else {
+          funds--;
+          counter++;
+          var prev = currentAmountArray[currentAmountArray.length - 1];
+          var current = prev - 1;
+          currentAmountArray.push(current);
+        }
+        totalRolls = totalRolls++;
+      }
+
+      //find max amount won
+      maxEnd = Math.max(...currentAmountArray);
+
+      //if there were no wins, max won't display initial value
+      if (maxEnd == initial) {
+        maxEnd = 0;
+      }
+
+      //roll # to hit max winnings, before dropping
+      rolls = currentAmountArray.indexOf(maxEnd) + 1;
+      if (rolls < 1) {
+        rolls = 0;
+      }
+
+      //required
+      document.getElementById("results" ).style.display = "block";
+      document.getElementById("starting").innerText = bet;
+      document.getElementById("totalRolls").innerText = totalRolls;
+      document.getElementById("max").innerText = maxEnd;
+      document.getElementById("rollCount").innerText = rolls;
+      //calc check
+      document.getElementById("rollerrrs").innerText = currentAmountArray;
+      document.getElementById("diceee1").innerText = a1;
+      document.getElementById("diceee2").innerText = a2;
+      document.getElementById("rollingsum").innerText = rollingsum;
+      document.getElementById("winCount").innerText = winCount;
+      //play again button change
+      document.getElementById('submitButton').value='Play Again';
+      return false;
+    }
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Lucky Sevens</h1>
+      <br>
+      <form name="rollform" onsubmit="return luckySevens();" class="form-inline">
+        <p>
+          <div class="form-group">
+            <label for="bet">Starting Bet:&nbsp; </label>
+            <input type="number" class="form-control" id="bet" placeholder="$0.00">
+          </div>
+        </p>
+        <input type="button" id="submitButton" value="Play" data-text-swap="Show" class="btn btn-default" onclick="luckySevens()">
+      </form>
+      <hr />
+      <table id="results" class="table table-striped" style="display:none;">
+        <thead>
+          <tr>
+            <th colspan="2"><h3>Results</h3></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Starting Bet</td>
+            <td><i class="glyphicon glyphicon-usd"></i><span id="starting"></span></td>
+          </tr>
+          <tr>
+            <td>Total Rolls Before Going Broke</td>
+            <td><span id="totalRolls"></span></td>
+          </tr>
+          <tr>
+            <td>Highest Amount Won</td>
+            <td><i class="glyphicon glyphicon-usd"><span id="max"></span></td>
+          </tr>
+          <tr>
+            <td>Roll Count at Highest Amount Won</td>
+            <td><span id="rollCount"></span></td>
+          </tr>
+          <tr>
+            <th colspan="2"><h4>Check Results</h4></th>
+          </tr>
+          <tr>
+            <td>Amount of Money At Roll</td>
+            <td><i class="glyphicon glyphicon-usd"><span id="rollerrrs"></span></td>
+          </tr>
+          <tr>
+            <td>Dice 1 Rolls</td>
+            <td><span id="diceee1"></span></td>
+          </tr>
+          <tr>
+            <td>Dice 2 Rolls</td>
+            <td><span id="diceee2"></span></td>
+          </tr>
+          <tr>
+            <td>Dice Sum</td>
+            <td><span id="rollingsum"></span></td>
+          </tr>
+          <tr>
+            <td>Number of Wins</td>
+            <td><span id="winCount"></span></td>
+          </tr>
+        </tbody>
+      </table>
+
+    	<h4>Final Roll</h4>
+    		<span id="die1" class="dice" >1</span>
+    		<span id="die2" class="dice">1</span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+/*
+DEV10-Projects
+Brian Cedillo
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Oswald|Roboto');
+.header {
+	background-image: url("images/header.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+ 	color: white;
+ 	text-shadow: 5px 4px #000;
+ 	font-weight: 400;
+ 	background-color: black;
+  padding: 20px 0px;
+	text-align: center;
+	font-size: 60px;
+	font-family: 'Permanent Marker', cursive;}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Body */
+body{
+	margin: 0;
+  	padding-bottom: 6rem;
+  	min-height: 100%;
+	position: relative;
+	letter-spacing: 1px;
+    height: 100%;
+
+}
+
+html,
+body {
+	margin: 0px;
+    min-height: 100%;
+}
+
+/* Footer */
+.footer-section {
+	position: absolute;
+	bottom: 0;
+    background: #000;
+    padding: 10px 0px;
+    color: #f8f8f8;
+	right: 0;
+	left: 0;
+	padding: 1rem;
+}
+
+.footer-section p {
+    font-size: 14px;
+    text-align: center !important;
+}
+
+.footer-section a {
+    color: #ffffff;
+}
+
+/* Links */
+a.active {
+	text-decoration: none;
+}
+
+a active {
+	text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    font-weight:bold;
+    text-decoration: none;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: 0 none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* About */
+.resAbout {
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	color: #191919;
+	padding-bottom: 50%;
+}
+
+.lead {
+	text-align: center;
+}
+
+/* Jumbotron */
+.jumbotron {
+		margin-bottom: auto;
+		background-image: url("images/italian.jpg");
+		color: white;
+		text-shadow: 2px 3px #000;
+		background-size: 100%;
+}
+
+.carousel-caption {
+	text-shadow: 2px 3px #000;
+}
+
+section {
+	width: 100%;
+	margin-bottom: 10%;
+}
+
+/* Contact */
+.contact-us {
+	background-color: #f9f9f9;
+}
+
+ .section-space-padding {
+    padding: 100px 20%;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+
+.checkb {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+/* Navbar */
+.nav {
+	background-color: #000;
+	z-index: 2;
+}
+
+.navigation-menu .navbar-nav li a {
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 30px 15px;
+    font-weight: 600;
+}
+
+.navigation-menu .navbar-nav li a:hover {
+    background: none;
+    color: #fff;
+}
+
+.nav li a:focus,
+.nav li a:hover {
+    background: none;
+    color: #fff;
+}
+
+
+.navigation-background {
+    background: #000;
+    width: 100%;
+}
+
+.navigation-background .navigation-menu .navbar-nav li a {
+    color: #fff;
+    padding: 20px 15px;
+}
+
+.navigation-background .navigation-menu .navbar-nav li a:hover {
+    color: #fff;
+}
+
+/* STICKY NAV BAR*/
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+/*restaurant description container*/
+.home-color {
+	padding-top: 60px;
+	color: white;
+}
+
+.container {
+		margin-top: 0px;
+		padding-top: 120px;
+		padding-left: 40px;
+		padding-right:40px;
+		background-color: white;
+}

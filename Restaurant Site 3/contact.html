@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Head Start -->
+  	<head>
+  		<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   		<meta name="description" content="Dev10-Projects">
+    	<meta name="author" content="Brian Cedillo">
+
+      	<title>Contact Us</title>
+      	
+  		<link rel="stylesheet" href="restaurantStyles.css">
+
+		<!-- Bootstrap Start -->
+		<!-- 1. Add Bootstrap to the site. -->
+	  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<!-- Bootstrap End -->
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+  		<!-- 4. Change the Home link to use an Icon from one of the supported fonts that looks like a house. -->
+  		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    		<!-- Fonts Start -->
+  		<link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Bungee+Shade">
+  		<link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto">
+            <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Righteous">
+          <!-- Fonts End -->
+
+  		<!-- Style Start -->
+  		<style>
+  			form {
+			text-align: center;
+			}
+
+			ul {
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			    overflow: hidden;
+			}
+
+			li {
+			    float: left;
+			}
+
+			li a {
+			    text-align: center;
+			    padding: 14px 16px;
+			}
+
+			h1{
+				text-align: center;
+			}
+
+			.about {
+				width: 400px;
+				padding-left: 34%;
+			}
+		</style>
+		<!-- Style End -->
+
+   	</head>
+   	<!-- Head End -->
+
+	<!-- Body Start -->
+	<body>
+		<div class="header">
+	  		<div>Brian's Bar and Grill</div>
+		</div>
+
+		<!-- NavBar Start -->
+		 	<!-- 2. Style the site navigation so that you are using either tabs or pills. -->
+			<ul class="nav nav-tabs">
+			  <li class="nav-item">
+			  	<!-- 4. Change the Home link to use an Icon from one of the supported fonts that looks like a house. -->
+			    <a class="nav-link" href="index.html"><i class="fas fa-home"></i></a>
+			  <li class="nav-item">
+			    <a class="nav-link" href="menu.html">Menu</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link active" href="#contact.html">Contact Us</a>
+			  </li>
+			</ul>
+		<!-- NavBar End -->
+
+		<!-- Form Start -->
+
+		<!-- 6. Use the Bootstrap form items for your Contact Us form -->
+		<section id="contact" class="contact-us section-space-padding">
+		   	<div class="col-md-12">
+		   		<!-- 7. Make sure that users who have JavaScript disabled know that this site is best viewed with JavaScript enabled. -->
+		   		<noscript>
+				<h1 class="col-md-12">JavaScript is off. This site is best viewed with Javascript enabled.</h1>
+   				</noscript>
+
+				<form name="myForm" onsubmit="return getConfirmation()" method="post">
+					<div class="row">
+					  	<div class="col-md-6">
+							<div class="form-group"><label><strong>Name:</strong></label>
+						  		<input type="text" id="name" class="form-control" placeholder="" autofocus>
+						 	</div>
+			            </div>
+
+			           	<div class="col-md-6">
+					    	<div class="form-group"><label><strong>Email:</strong></label>
+						 		<input type="email" id="email" class="form-control" placeholder="">
+						 	</div>
+			            </div>
+
+			            <div class="col-md-6">
+						  	<div class="form-group"><label><strong>Phone:</strong></label>
+								<input type="tel" id="tel" class="form-control" placeholder="">
+						   	</div>
+			            </div>
+
+			            <div class="col-md-6">
+			             	<label><strong>Reason For Inquiry: </strong></label>
+						  	<select id="subject" class="form-group form-control">
+								<option>Catering</option>
+								<option>Private Party</option>
+								<option>Feedback</option>
+			  					<option>Other</option>
+						   	</select>
+			            </div>
+
+			            <div class="col-md-12"><label><strong>Additional Information:</strong></label>
+					    	<div class="textarea-message form-group">
+					      		<textarea id="message" class="textarea-message form-control" placeholder="" rows="5"></textarea>
+						  	</div>
+			            </div>
+
+					    <div class="col-md-12">
+							<label class="form-group"><strong> Have you been to the restaurant? </strong></label>
+							<input type="radio" name="visited" value="no"/> No
+							<input type="radio" name="visited" value="yes"/> Yes
+				        </div>
+
+				        <div class="col-md-12">
+				        	<div class="checkb">
+					            <label class="form-group"><strong>Best days to contact you:</strong></label>
+								<input type="checkbox" name="days" value="Monday"> M
+								<input type="checkbox" name="days" value="Tuesday"> T
+								<input type="checkbox" name="days" value="Wednesday"> W
+								<input type="checkbox" name="days" value="Thursday"> Th
+								<input type="checkbox" name="days" value="Friday"> F
+							</div>
+						</div>
+
+			            <div class="col-md-12">
+					   		<button type="submit" class="btn btn-primary" onclick="getConfirmation();">Submit</button>
+				        </div>
+				    </div>
+	    		</form>
+	    	</div>
+	    </section>
+		<!-- Form End -->
+	<noscript>
+      	<div class="error message">
+      		JavaScript is off. This site is best viewed with Javascript enabled.
+      	</div>
+    </noscript>
+
+
+	<!-- Body End -->
+
+	<!-- Footer Start -->
+	<div class="footer-section" >
+	  <div class="card-footer">
+	    <p>559 Mooja Lane, Jacksonville, Florida 32211</p>
+	   	<p>(293)847-5612</p>
+	  </div>
+	</div>
+	<!-- Footer End -->
+
+<!-- 6. validate in Javascript that data has been provided and give a message that the information is valid without submitting it anywhere. -->
+  <script>
+         <!--
+            function getConfirmation(){
+            	var x = document.forms["myForm"]["name"].value;
+			    if (x == "") {
+			        alert("Name section must be filled out before submitting!");
+			        return false;
+			    }
+			    var x = document.forms["myForm"]["email"].value;
+			    if (x == "") {
+			        alert("Email section must be filled out before submitting!");
+			        return false;
+			    }
+               var retVal = confirm("Thank you! We'll get back to you as soon as possible!");
+            }
+         //-->
+      </script>
+</body>
+
+
+
+</html>
